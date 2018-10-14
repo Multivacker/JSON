@@ -1,0 +1,17 @@
+Loop Through the Result
+Convert the result received from the PHP file into a JavaScript object, or in this case, a JavaScript array:
+
+Example
+Use JSON.parse() to convert the JSON into a JavaScript object:
+
+...
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        for (x in myObj) {
+            txt += myObj[x].name + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+};
+...

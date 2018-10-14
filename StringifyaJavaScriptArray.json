@@ -1,0 +1,17 @@
+Stringify a JavaScript Array
+It is also possible to stringify JavaScript arrays:
+
+Imagine we have this array in JavaScript:
+
+var arr = [ "John", "Peter", "Sally", "Jane" ];
+Use the JavaScript function JSON.stringify() to convert it into a string.
+
+var myJSON = JSON.stringify(arr);
+The result will be a string following the JSON notation.
+
+myJSON is now a string, and ready to be sent to a server:
+
+Example
+var arr = [ "John", "Peter", "Sally", "Jane" ];
+var myJSON = JSON.stringify(arr);
+document.getElementById("demo").innerHTML = myJSON;

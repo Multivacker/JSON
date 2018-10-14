@@ -1,0 +1,15 @@
+Parsing Functions
+Functions are not allowed in JSON.
+
+If you need to include a function, write it as a string.
+
+You can convert it back into a function later:
+
+Example
+Convert a string into a function:
+
+var text = '{ "name":"John", "age":"function () {return 30;}", "city":"New York"}';
+var obj = JSON.parse(text);
+obj.age = eval("(" + obj.age + ")");
+
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age();

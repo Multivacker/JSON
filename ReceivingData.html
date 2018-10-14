@@ -1,0 +1,21 @@
+<!-- Receiving Data
+If you receive data in JSON format, you can convert it into a JavaScript object: -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a string written in JSON format, into a JavaScript object.</h2>
+
+<p id="demo"></p>
+
+<script>
+var myJSON = '{"name":"Nahuel", "age":39, "city":"VBuenos Aires"}';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.name;
+</script>
+
+<p>You will learn more about the JSON.parse() function later in this tutorial.</p>
+
+</body>
+</html>

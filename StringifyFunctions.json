@@ -1,0 +1,19 @@
+Stringify Functions
+In JSON, functions are not allowed as object values.
+
+The JSON.stringify() function will remove any functions from a JavaScript object, both the key and the value:
+
+Example
+var obj = {"name":"Nahuel", "age":function () {return 39;}, "city":"Buenos Aires"};
+var myJSON = JSON.stringify(obj);
+
+document.getElementById("demo").innerHTML = myJSON;
+This can be omitted if you convert your functions into strings before running the JSON.stringify() function.
+
+Example
+var obj = {"name":"Nahuel", "age":function () {return 39;}, "city":"Buenos Aires"};
+obj.age = obj.age.toString();
+var myJSON = JSON.stringify(obj);
+
+document.getElementById("demo").innerHTML = myJSON;
+You should avoid using functions in JSON, the functions will lose their scope, and you would have to use eval() to convert them back into functions.

@@ -1,0 +1,52 @@
+JSON Data Types
+
+Valid Data Types
+In JSON, values must be one of the following data types:
+
+a string
+a number
+an object (JSON object)
+an array
+a boolean
+null
+JSON values cannot be one of the following data types:
+
+a function
+a date
+undefined
+JSON Strings
+Strings in JSON must be written in double quotes.
+
+Example
+{ "name":"Nahuel" }
+JSON Numbers
+Numbers in JSON must be an integer or a floating point.
+
+Example
+{ "age":39 }
+JSON Objects
+Values in JSON can be objects.
+
+Example
+{
+"employee":{ "name":"Nahuel", "age":39, "city":"Buenos Aires" }
+}
+Objects as values in JSON must follow the same rules as JSON objects.
+
+JSON Arrays
+Values in JSON can be arrays.
+
+Example
+{
+"employees":[ "Nahuel", "Mayra", "Brichu" ]
+}
+JSON Booleans
+Values in JSON can be true/false.
+
+Example
+{ "sale":true }
+JSON null
+Values in JSON can be null.
+
+Example
+{ "middlename":null }

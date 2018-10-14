@@ -1,0 +1,16 @@
+Looping an Object
+You can loop through object properties by using the for-in loop:
+
+Example
+myObj = { "name":"Nahuel", "age":39, "car":null };
+for (x in myObj) {
+    document.getElementById("demo").innerHTML += x;
+}
+
+In a for-in loop, use the bracket notation to access the property values:
+
+Example
+myObj = { "name":"Nahuel", "age":39, "car":null };
+for (x in myObj) {
+    document.getElementById("demo").innerHTML += myObj[x];
+}

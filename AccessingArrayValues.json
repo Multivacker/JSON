@@ -1,0 +1,5 @@
+Accessing Array Values
+You access the array values by using the index number:
+
+Example
+x = myObj.cars[0];

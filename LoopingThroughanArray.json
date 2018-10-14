@@ -1,0 +1,13 @@
+Looping Through an Array
+You can access array values by using a for-in loop:
+
+Example
+for (i in myObj.cars) {
+    x += myObj.cars[i];
+}
+Or you can use a for loop:
+
+Example
+for (i = 0; i < myObj.cars.length; i++) {
+    x += myObj.cars[i];
+}

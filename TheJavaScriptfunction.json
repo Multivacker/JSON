@@ -1,0 +1,7 @@
+The JavaScript function
+The function named "myFunc" is located on the client, and ready to handle JSON data:
+
+Example
+function myFunc(myObj) {
+    document.getElementById("demo").innerHTML = myObj.name;
+}

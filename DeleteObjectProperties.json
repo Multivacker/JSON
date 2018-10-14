@@ -1,0 +1,5 @@
+Delete Object Properties
+Use the delete keyword to delete properties from a JSON object:
+
+Example
+delete myObj.cars.car2;

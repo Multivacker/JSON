@@ -1,0 +1,17 @@
+JSON From the Server
+You can request JSON from the server by using an AJAX request
+
+As long as the response from the server is written in JSON format, you can parse the string into a JavaScript object.
+
+Example
+Use the XMLHttpRequest to get data from the server:
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+    }
+};
+xmlhttp.open("GET", "json_demo.txt", true);
+xmlhttp.send();

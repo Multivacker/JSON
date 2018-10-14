@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Exceptions</h1>
+  <h2>Stringify Dates</h2>
+  <p>In JSON, date objects are not allowed. The JSON.stringify() function will convert any dates into strings.</p>
+
+<h2>JSON.stringify will convert any date objects into strings.</h2>
+
+<p id="demo"></p>
+
+<script>
+var obj = {"name":"Nahuel", "today":new Date(), "city":"Buenos Aires"};
+var myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;
+</script>
+<p>You can convert the string back into a date object at the receiver.</p><br>
+</body>
+</html>

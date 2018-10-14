@@ -1,0 +1,21 @@
+<!-- Sending Data
+If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:
+
+Example -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a JavaScript object into a JSON string, and send it to the server.</h2>
+
+<script>
+var myObj = {"name":"Nahuel", "age":39, "city":"Buenos Aires"};
+var myJSON = JSON.stringify(myObj);
+window.location = "demo_json.php?x=" + myJSON;
+</script>
+
+<p>You will learn more about the JSON.stringify() function later in this tutorial.</p>
+
+</body>
+</html>

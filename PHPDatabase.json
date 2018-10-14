@@ -1,0 +1,26 @@
+PHP Database
+PHP is a server side programming language, and should be used for operations that can only be performed by a server, like accessing a database.
+
+Imagine you have a database on the server, containing customers, products, and suppliers.
+
+You want to make a request to the server where you ask for the first 10 records in the "customers" table:
+
+Example
+Use JSON.stringify() to convert the JavaScript object into JSON:
+
+obj = { "table":"customers", "limit":10 };
+dbParam = JSON.stringify(obj);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML = this.responseText;
+    }
+};
+xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam, true);
+xmlhttp.send();
+Example explained:
+Define an object containing a table property and a limit property.
+Convert the object into a JSON string.
+Send a request to the PHP file, with the JSON string as a parameter.
+Wait until the request returns with the result (as JSON)
+Display the result received from the PHP file.

@@ -1,0 +1,18 @@
+Values in a JSON object can be another JSON object.
+
+Example
+myObj = {
+    "name":"John",
+    "age":30,
+    "cars": {
+        "car1":"Ford",
+        "car2":"BMW",
+        "car3":"Fiat"
+    }
+ }
+You can access nested JSON objects by using the dot notation or bracket notation:
+
+Example
+x = myObj.cars.car2;
+//or:
+x = myObj.cars["car2"];

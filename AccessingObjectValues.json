@@ -1,0 +1,13 @@
+Accessing Object Values
+You can access the object values by using dot (.) notation:
+
+Example
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj.name;
+
+
+You can also access the object values by using bracket ([]) notation:
+
+Example
+myObj = { "name":"John", "age":30, "car":null };
+x = myObj["name"];

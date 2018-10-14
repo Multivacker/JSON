@@ -1,0 +1,15 @@
+The Client JavaScript
+Here is a JavaScript on the client, using an AJAX call to request the PHP file from the example above:
+
+Example
+Use JSON.parse() to convert the result into a JavaScript object:
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+    }
+};
+xmlhttp.open("GET", "demo_file.php", true);
+xmlhttp.send();

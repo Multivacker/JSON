@@ -1,0 +1,9 @@
+Modify Values
+You can use the dot notation to modify any value in a JSON object:
+
+Example
+myObj.cars.car2 = "Mercedes";
+You can also use the bracket notation to modify a value in a JSON object:
+
+Example
+myObj.cars["car2"] = "Mercedes";

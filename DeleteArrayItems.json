@@ -1,0 +1,5 @@
+Delete Array Items
+Use the delete keyword to delete items from an array:
+
+Example
+delete myObj.cars[1];

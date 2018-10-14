@@ -1,0 +1,24 @@
+JSON.parse()
+A common use of JSON is to exchange data to/from a web server.
+
+When receiving data from a web server, the data is always a string.
+
+Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+Example - Parsing JSON
+Imagine we received this text from a web server:
+
+'{ "name":"Nahuel", "age":39, "city":"Buenos Aires"}'
+Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
+
+var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+Make sure the text is written in JSON format, or else you will get a syntax error.
+
+Use the JavaScript object in your page:
+
+Example
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+</script>

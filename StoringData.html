@@ -1,0 +1,30 @@
+<!-- Storing Data
+When storing data, the data has to be a certain format, and regardless of where you choose to store it, text is always one of the legal formats.
+
+JSON makes it possible to store JavaScript objects as text.
+
+Example
+Storing data in local storage -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Store and retrieve data from local storage.</h2>
+
+<p id="demo"></p>
+
+<script>
+var myObj, myJSON, text, obj;
+//Storing data:
+myObj = {"name":"Nahuel", "age":39, "city":"Buenos Aires"};
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+//Retrieving data:
+text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.name;
+</script>
+
+</body>
+</html>

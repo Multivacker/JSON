@@ -1,0 +1,39 @@
+Dynamic JSONP Result
+The examples above are still very static.
+
+Make the example dynamic by sending JSON to the php file, and let the php file return a JSON object based on the information it gets.
+
+PHP file
+<?php
+header("Content-Type: application/json; charset=UTF-8");
+$obj = json_decode($_GET["x"], false);
+
+$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+$result = $conn->query("SELECT name FROM ".$obj->$table." LIMIT ".$obj->$limit);
+$outp = array();
+$outp = $result->fetch_all(MYSQLI_ASSOC);
+
+echo "myFunc(".json_encode($outp).")";
+?>
+PHP File explained:
+Convert the request into an object, using the PHP function json_decode().
+Access the database, and fill an array with the requested data.
+Add the array to an object.
+Convert the array into JSON using the json_encode() function.
+Wrap "myFunc()" around the return object.
+JavaScript Example
+The "myFunc" function will be called from the php file:
+
+function clickButton() {
+    var obj, s
+    obj = { "table":"products", "limit":10 };
+    s = document.createElement("script");
+    s.src = "jsonp_demo_db.php?x=" + JSON.stringify(obj);
+    document.body.appendChild(s);
+}
+function myFunc(myObj) {
+    var x, txt = "";
+    for (x in myObj) {
+        txt += myObj[x].name + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
